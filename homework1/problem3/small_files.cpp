@@ -1,7 +1,8 @@
 /*
 3.1 Count words in many small files
 Compile : mpic++ -o small_files small_files.cpp
-run e.g.: mpirun -np 8 ./small_files
+Process 0 scan the files in the folder and split the paths to all processes
+run e.g.: mpirun -np 4 ./small_files
 Author: Gang Chen
 */
 
@@ -20,9 +21,8 @@ Author: Gang Chen
 
 using namespace std;
  
-void count(fstream &in, string &file_name, long int &cnt) 
+void count(fstream &in, long int &cnt, const char *file) 
 { 
-	const char *file = file_name.c_str();
 	in.open(file);
 
 	char ch;
@@ -99,7 +99,7 @@ int main(int argc, char** argv) {
 	    for(int i=0; i<end_num_0; i++)
 	    {
 	    	long int cnt = 0;
-			count(in, files[i], cnt);
+			count(in, cnt, files[i].c_str());
 			cout <<"File " << files[i] <<" has " << cnt << " words." <<endl;
 	    }
 	}
@@ -131,7 +131,7 @@ int main(int argc, char** argv) {
 		{
 			long int cnt = 0;
 			string name = file_names_local[j] + ".txt";
-			count(in, name, cnt);
+			count(in, cnt, name.c_str());
 			cout <<"File " << name <<" has " << cnt << " words." <<endl;
 		}
 	}
