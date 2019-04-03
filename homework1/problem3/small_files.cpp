@@ -38,7 +38,7 @@ void count(fstream &in, long int &cnt, const char *file)
 int main(int argc, char** argv) {
 	int id, p, n;
 	double time;
-	const char *folder = "/home/clarence/Desktop/parallel_programming/Small_file/tmp";
+	const char *folder = "/home/epcc-course/Example/Homework/Small_file/tmp";
 	vector<string> files; //To store file names 
 
 	MPI_Init(NULL, NULL);

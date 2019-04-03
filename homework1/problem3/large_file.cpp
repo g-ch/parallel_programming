@@ -26,7 +26,7 @@ int main(int argc, char** argv)
 {
 	int id, p, n;
 	double time;
-	const char *file = "/home/clarence/Desktop/parallel_programming/big_file/Big_file/big_100.txt";
+	const char *file = "/home/epcc-course/Example/Homework/Big_file/big_100.txt";
 
 	MPI_Init(NULL, NULL);
 	MPI_Barrier(MPI_COMM_WORLD);
