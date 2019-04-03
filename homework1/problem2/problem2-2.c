@@ -1,6 +1,7 @@
 /*
 2.2 Implement the matrix max pool operation for Matrix A.
 The result is in Matrix B
+Compile : mpicc -o problem2-2 problem2-2.c
 run: mpirun -np 8 ./problem2-2
 Author: Gang Chen
 */

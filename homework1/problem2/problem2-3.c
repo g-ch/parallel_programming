@@ -3,6 +3,7 @@
 Kernel is 4x4 "L" shaped kernel showed in array "kernel" 
 Stride = 1
 The result is in Matrix B
+Compile : mpicc -o problem2-3 problem2-3.c
 run e.g.: mpirun -np 8 ./problem2-3
 Author: Gang Chen
 */

@@ -2,6 +2,7 @@
 2.1 Implement the matrix multiplication function.
 Generate random matrix and do matrix multiplication AxB=C
 based on the Rowwise Block-Striped Parallel method.
+Compile : mpicc -o problem2-1 problem2-1.c
 run e.g.: mpirun -np 8 ./problem2-1
 Author: Gang Chen
 */
